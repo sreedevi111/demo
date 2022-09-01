@@ -1,11 +1,14 @@
-import {Text, View } from 'react-native'
+import {Text, View, Button } from 'react-native'
 import React from 'react'
 import styles from './styles'
 
-const LandingScreen = () => {
+const LandingScreen = ({navigation}) => {
   return (
     <View>
-      <Text style={styles.textline}>LandingScreen</Text>
+      <Button
+       title="Go to Counter Screen"
+       onPress={() => navigation.navigate('Counter')}
+      />
     </View>
   )
 }
